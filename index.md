@@ -1,37 +1,16 @@
-## Welcome to GitHub Pages
+# Julian Joseph ☁️
+Quality Engineer @ [Salesforce.com](Salesforce.com)
+I enjoy [Automating Salesforce](https://www.youtube.com/watch?v=B03PY9RUUqw).
 
-You can use the [editor on GitHub](https://github.com/Julian88Tex/myprojects/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## A Little About Me
 
-### Markdown
+Flunked out of Electrical Engineering 🤭, fell in love with majoring in Asian American Studies 💜, and somehow am back in Engineering ✊🏽. I spend most of my time worrying 😱 about potential bugs 🐛 or confusing UIs 🤦🏾‍♂️ so users don't have to. Specifically, I'm a Quality Engineer at Salesforce ☁️ with experience releasing managed packages 📦 and building automated robot framework tests 🤖on CI/CD tools likes Salesforce DX and CumulusCI 🌧💰. But most importantly, I'm passionate about working on products that create social good 🌈.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Links
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Julian88Tex/myprojects/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- Check out my 160+ badges on Trailhead: https://trailblazer.me/id/julianjoseph
+- My 160+ badges on Trailhead: https://trailblazer.me/id/julianjoseph
+- Or my resume: http://bit.ly/julian2019resume
+- Or my github: https://github.com/Julian88Tex
+- And my Salesforce Stack Exchange profile (working on it): https://salesforce.stackexchange.com/users/30066/julian-joseph 
