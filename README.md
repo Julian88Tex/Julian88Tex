@@ -1,5 +1,6 @@
 # Julian Joseph ☁️
-Quality Engineer @ [Salesforce.com](Salesforce.com)
+I'm a Quality Engineer @ [Salesforce.com](Salesforce.com).
+
 I enjoy [Automating Salesforce](https://www.youtube.com/watch?v=B03PY9RUUqw).
 
 
@@ -9,8 +10,8 @@ Flunked out of Electrical Engineering 🤭, fell in love with majoring in Asian 
 
 ## Links
 
-- Check out my 160+ badges on Trailhead: https://trailblazer.me/id/julianjoseph
-- My 160+ badges on Trailhead: https://trailblazer.me/id/julianjoseph
-- Or my resume: http://bit.ly/julian2019resume
-- Or my github: https://github.com/Julian88Tex
-- And my Salesforce Stack Exchange profile (working on it): https://salesforce.stackexchange.com/users/30066/julian-joseph 
+- [LinkedIn](https://www.linkedin.com/in/juliandjoseph/)
+- [Trailhead](https://trailblazer.me/id/julianjoseph)
+- [Resume](http://bit.ly/julian2019resume)
+- [Github](https://github.com/Julian88Tex)
+- [Stack Exchange](https://salesforce.stackexchange.com/users/30066/julian-joseph)
