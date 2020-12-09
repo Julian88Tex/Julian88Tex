@@ -4,6 +4,7 @@ I'm a Senior Quality Engineer @ [Salesforce.com](Salesforce.com).
 
 I enjoy [Automating Salesforce](https://www.youtube.com/watch?v=B03PY9RUUqw).
 
+[![Salesforce Automation with Robot Framework](https://i9.ytimg.com/vi/B03PY9RUUqw/maxresdefault.jpg?time=1607551500000&sqp=CIyUxf4F&rs=AOn4CLB8uM0iiCpyh8c9KcQIc3Tqkj7kmg)](https://www.youtube.com/watch?v=B03PY9RUUqw)
 
 ## A Little About Me
 
