@@ -14,6 +14,6 @@ Flunked out of Electrical Engineering 🤭, fell in love with majoring in Asian 
 
 - [LinkedIn](https://www.linkedin.com/in/juliandjoseph/)
 - [Trailhead](https://trailblazer.me/id/julianjoseph)
-- [Resume](http://bit.ly/julian2019resume)
+- [Resume](http://bit.ly/julian2021resume)
 - [Github](https://github.com/Julian88Tex)
 - [Stack Exchange](https://salesforce.stackexchange.com/users/30066/julian-joseph)
