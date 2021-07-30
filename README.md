@@ -4,7 +4,7 @@ I'm a Senior Quality Engineer @ [Salesforce.com](Salesforce.com).
 
 I enjoy [Automating Salesforce](https://www.youtube.com/watch?v=B03PY9RUUqw).
 
-<a href="https://www.youtube.com/watch?v=B03PY9RUUqw"><img src="images/salesforce-automation-with-rf.png" width="400" height="225" alt="link to Salesforce Automation with Robot Framework video"></a> <a href="https://www.youtube.com/watch?v=EGw7cYo5UIs"><img src="images/mike-wheeler-podcast.png" width="400" height="225" alt="link to Interview with Mike Wheeler"></a>
+<a href="https://www.youtube.com/watch?v=B03PY9RUUqw" target="_blank"><img src="images/salesforce-automation-with-rf.png" width="400" height="225" alt="link to Salesforce Automation with Robot Framework video"></a> <a href="https://www.youtube.com/watch?v=EGw7cYo5UIs"><img src="images/mike-wheeler-podcast.png" width="400" height="225" alt="link to Interview with Mike Wheeler"></a>
 
 ## A Little About Me
 
