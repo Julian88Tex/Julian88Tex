@@ -1,5 +1,9 @@
 # Julian Joseph ☁️
 
+Salesforce Quality Architect 🏛 Senior Salesforce QA (API/ISV) @ Salesforce ⚡️ Salesforce DevOps ↔️ Black ✊🏽 Gay 🌈 Christian ✝ Pizza Lover 🍕 ARFID 🦯 Accessibility ♿️ Generalized Anxiety 😔 Panic Attacks 😩 TMI?
+
+## Featured Content
+
 I'm a Senior Quality Engineer @ [Salesforce.com](Salesforce.com).
 
 I enjoy [Automating Salesforce](https://www.youtube.com/watch?v=B03PY9RUUqw).
