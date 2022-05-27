@@ -1,6 +1,6 @@
 # Julian Joseph ☁️ 
 
-Salesforce Quality Architect 🏛 Senior Salesforce QA (API/ISV) @ Salesforce ⚡️ Salesforce DevOps ↔️ Black ✊🏽 Gay 🌈 Christian ✝ Pizza Lover 🍕 ARFID 🦯 Accessibility ♿️ Generalized Anxiety 😔 Panic Attacks 😩 TMI?
+RPA-ing my Life 🤖 Salesforce Quality Architect (Previously @ Salesforce) ⚡️ Salesforce DevOps ↔️ SXSW ↙️ Black ✊🏽 Gay 🌈 Christian ✝ Pizza 🍕 ARFID 🦯 Accessibility ♿️ Anxiety 😔 Panic Attacks 😩 SSRIs 💊 TMI?
 
 ## Featured Content
 
