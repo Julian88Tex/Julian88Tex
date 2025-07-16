@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work with Julian Joseph - Pricing</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide-react.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { margin: 0; padding: 0; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState } = React;
+        const { 
+            ChevronRight, 
+            Code, 
+            FileText, 
+            Calendar, 
+            Users, 
+            TrendingUp, 
+            Calculator, 
+            ExternalLink, 
+            Plus, 
+            Minus, 
+            ArrowLeft, 
+            Briefcase, 
+            Eye 
+        } = lucideReact;
+
+        function PricingPage() {
+            const [serviceQuantities, setServiceQuantities] = useState({
+                'linkedin-post': 0,
+                'technical-article': 0,
+                'content-pilot': 0
+            });
+
+            const workSamples = {
+                posts: [
+                    { title: "Salesforce DevOps innovation", url: "https://www.linkedin.com/posts/juliandjoseph_oops-i-think-i-just-made-salesforce-devops-activity-7307869326047432704-LNzK" },
+                    { title: "AI Flow creation demo", url: "https://www.linkedin.com/posts/juliandjoseph_creating-a-salesforce-flow-using-ai-resslai-activity-7323828089480753152-3rhE" },
+                    { title: "ChatGPT Operator for SF", url: "https://www.linkedin.com/posts/juliandjoseph_i-asked-chatgpt-operator-to-do-a-salesforce-activity-7288638631202701312-U8mC" }
+                ],
+                articles: [
+                    { title: "Salesforce Inspector Guide", url: "https://www.salto.io/blog-posts/salesforce-inspector-reloaded-features" },
+                    { title: "Choosing DevOps Tools", url: "https://www.salto.io/blog-posts/choosing-the-right-salesforce-devops-tools" },
+                    { title: "AI Documentation for SF", url: "https://www.salto.io/blog-posts/ai-documentation-for-salesforce-teams-the-markdown-compromise" }
+                ]
+            };
+
+            const services = [
+                {
+                    id: 'linkedin-post',
+                    name: 'Sponsored LinkedIn Post',
+                    basePrice: 750,
+                    description: 'One post (copy + creative) crafted for your product or brand',
+                    icon: React.createElement(Users, { className: "w-5 h-5" }),
+                    unit: 'post',
+                    highlight: false
+                },
+                {
+                    id: 'technical-article',
+                    name: 'Technical Article',
+                    basePrice: 2000,
+                    description: '≈ 2-page deep dive that explains and positions your solution',
+                    icon: React.createElement(FileText, { className: "w-5 h-5" }),
+                    unit: 'article',
+                    highlight: false
+                },
+                {
+                    id: 'content-pilot',
+                    name: 'Two-Month Content Pilot',
+                    basePrice: 20000,
+                    description: '10 LinkedIn posts, 1 technical article, performance report, light founder-post guidance',
+                    icon: React.createElement(Calendar, { className: "w-5 h-5" }),
+                    unit: 'pilot',
+                    highlight: true
+                }
+            ];
+
+            const pricingSources = [
+                {
+                    text: 'Medium survey (Feb 2025): $200-$500/post for 10k-50k followers',
+                    url: 'https://medium.com/@ivanpalii/how-much-does-it-cost-to-hire-an-influencer-on-linkedin-42f88f594094'
+                },
+                {
+                    text: 'Shopify Influencer Report: B2B niches command premium rates',
+                    url: 'https://www.shopify.com/blog/influencer-pricing'
+                },
+                {
+                    text: 'Thibaut Souyris: $800-$1,500/post for 15k-30k LinkedIn followers',
+                    url: 'https://www.linkedin.com/posts/thibautsouyris_i-used-to-think-b2b-influencer-pricing-was-activity-7346507721132638208-MssC'
+                }
+            ];
+
+            const updateQuantity = (serviceId, delta) => {
+                setServiceQuantities(prev => ({
+                    ...prev,
+                    [serviceId]: Math.max(0, prev[serviceId] + delta)
+                }));
+            };
+
+            const calculateBaseTotal = () => {
+                return Object.entries(serviceQuantities).reduce((total, [serviceId, quantity]) => {
+                    const service = services.find(s => s.id === serviceId);
+                    return total + (service ? service.basePrice * quantity : 0);
+                }, 0);
+            };
+
+            return React.createElement('div', { className: "min-h-screen bg-white text-gray-900" },
+                // Header
+                React.createElement('div', { className: "border-b border-gray-200" },
+                    React.createElement('div', { className: "max-w-6xl mx-auto px-4 sm:px-6 py-4" },
+                        React.createElement('div', { className: "flex items-center justify-between" },
+                            React.createElement('a', {
+                                href: "https://julianjoseph-dev-ed.my.site.com/portfolio/s/",
+                                className: "flex items-center gap-2 text-gray-600 hover:text-blue-600 hover:underline transition-colors"
+                            },
+                                React.createElement(ArrowLeft, { className: "w-4 h-4" }),
+                                React.createElement('span', { className: "text-sm" }, "Back to Portfolio")
+                            )
+                        )
+                    )
+                ),
+
+                // Stats bar
+                React.createElement('div', { className: "bg-gray-50 border-b border-gray-200" },
+                    React.createElement('div', { className: "max-w-6xl mx-auto px-4 sm:px-6 py-6" },
+                        React.createElement('div', { className: "flex flex-wrap gap-8 justify-center" },
+                            React.createElement('div', { className: "text-center" },
+                                React.createElement('p', { className: "text-sm text-gray-600 mb-1" }, "Followers"),
+                                React.createElement('p', { className: "text-3xl font-bold text-gray-900" }, "24K+")
+                            ),
+                            React.createElement('div', { className: "text-center" },
+                                React.createElement('p', { className: "text-sm text-gray-600 mb-1" }, "Avg. Reach/Post"),
+                                React.createElement('p', { className: "text-3xl font-bold text-gray-900" }, "3K")
+                            ),
+                            React.createElement('div', { className: "text-center" },
+                                React.createElement('p', { className: "text-sm text-gray-600 mb-1" }, "SF Developers"),
+                                React.createElement('p', { className: "text-3xl font-bold text-gray-900" }, "1K+")
+                            )
+                        )
+                    )
+                ),
+
+                React.createElement('div', { className: "max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16" },
+                    // Hero
+                    React.createElement('div', { className: "text-center mb-12" },
+                        React.createElement('h1', { className: "text-4xl sm:text-5xl font-bold mb-4" }, "Work with Julian Joseph"),
+                        React.createElement('p', { className: "text-xl text-gray-600 max-w-2xl mx-auto" }, "Salesforce DevOps Engineer - Developer Advocate")
+                    ),
+
+                    // Work Samples
+                    React.createElement('div', { className: "mb-8 px-6 py-4 bg-gray-50 rounded-lg border border-gray-200" },
+                        React.createElement('div', { className: "space-y-2" },
+                            React.createElement('div', { className: "flex flex-wrap items-center justify-between gap-4" },
+                                React.createElement('div', { className: "flex items-center gap-2 text-sm" },
+                                    React.createElement('span', { className: "font-semibold text-gray-700" }, "Sample Work:")
+                                ),
+                                React.createElement('a', {
+                                    href: "https://julianjoseph-dev-ed.my.site.com/portfolio/s/projects",
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    className: "text-sm text-blue-600 hover:text-blue-700 hover:underline font-medium"
+                                }, "View All →")
+                            ),
+                            
+                            React.createElement('div', { className: "flex flex-wrap items-center gap-4 text-sm" },
+                                React.createElement('span', { className: "text-gray-600" }, "LinkedIn:"),
+                                ...workSamples.posts.map((post, index) =>
+                                    React.createElement('a', {
+                                        key: index,
+                                        href: post.url,
+                                        target: "_blank",
+                                        rel: "noopener noreferrer",
+                                        className: "text-blue-600 hover:text-blue-700 hover:underline"
+                                    }, post.title)
+                                )
+                            ),
+                            
+                            React.createElement('div', { className: "flex flex-wrap items-center gap-4 text-sm" },
+                                React.createElement('span', { className: "text-gray-600" }, "Articles:"),
+                                ...workSamples.articles.map((article, index) =>
+                                    React.createElement('a', {
+                                        key: index,
+                                        href: article.url,
+                                        target: "_blank",
+                                        rel: "noopener noreferrer",
+                                        className: "text-blue-600 hover:text-blue-700 hover:underline"
+                                    }, article.title)
+                                )
+                            )
+                        )
+                    ),
+
+                    // Services Grid
+                    React.createElement('div', { className: "grid md:grid-cols-2 gap-6 mb-12" },
+                        ...services.map((service) =>
+                            React.createElement('div', {
+                                key: service.id,
+                                className: `relative p-6 rounded-xl border-2 transition-all ${
+                                    serviceQuantities[service.id] > 0
+                                        ? 'border-blue-500 bg-blue-50'
+                                        : service.highlight
+                                        ? 'border-purple-500 bg-purple-50'
+                                        : 'border-gray-200 bg-white hover:border-gray-300'
+                                }`
+                            },
+                                service.highlight && React.createElement('div', {
+                                    className: "absolute -top-3 left-6 px-3 py-1 bg-purple-500 text-white text-xs font-semibold rounded-full"
+                                }, "POPULAR"),
+                                
+                                React.createElement('div', { className: "mb-4" },
+                                    React.createElement('div', { className: "flex items-center gap-3 mb-3" },
+                                        React.createElement('div', {
+                                            className: `p-2 rounded-lg ${
+                                                serviceQuantities[service.id] > 0 ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-600'
+                                            }`
+                                        }, service.icon),
+                                        React.createElement('h3', { className: "text-xl font-semibold" }, service.name)
+                                    ),
+                                    React.createElement('p', { className: "text-3xl font-bold mb-3" },
+                                        `$${service.basePrice.toLocaleString()}`,
+                                        React.createElement('span', { className: "text-base font-normal text-gray-500" }, `/${service.unit}`)
+                                    ),
+                                    React.createElement('p', { className: "text-gray-600 mb-4" }, service.description)
+                                ),
+                                
+                                React.createElement('div', { className: "flex items-center justify-between" },
+                                    React.createElement('span', { className: "text-sm text-gray-500" }, "Quantity:"),
+                                    React.createElement('div', { className: "flex items-center gap-3" },
+                                        React.createElement('button', {
+                                            onClick: () => updateQuantity(service.id, -1),
+                                            className: "w-8 h-8 rounded-lg bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1",
+                                            disabled: serviceQuantities[service.id] === 0
+                                        }, React.createElement(Minus, { className: "w-4 h-4" })),
+                                        React.createElement('span', { className: "w-8 text-center font-semibold" }, serviceQuantities[service.id]),
+                                        React.createElement('button', {
+                                            onClick: () => updateQuantity(service.id, 1),
+                                            className: "w-8 h-8 rounded-lg bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1"
+                                        }, React.createElement(Plus, { className: "w-4 h-4" }))
+                                    )
+                                )
+                            )
+                        ),
+                        
+                        // Hire Full-Time Option
+                        React.createElement('div', { className: "relative p-6 rounded-xl border-2 border-gray-200 bg-gradient-to-br from-gray-50 to-white hover:border-gray-300 transition-all" },
+                            React.createElement('div', { className: "mb-4" },
+                                React.createElement('div', { className: "flex items-center gap-3 mb-3" },
+                                    React.createElement('div', { className: "p-2 rounded-lg bg-gray-100 text-gray-600" },
+                                        React.createElement(Briefcase, { className: "w-5 h-5" })
+                                    ),
+                                    React.createElement('h3', { className: "text-xl font-semibold" }, "Hire Me Full-Time")
+                                ),
+                                React.createElement('p', { className: "text-2xl font-bold mb-3" }, "Let's Discuss"),
+                                React.createElement('p', { className: "text-gray-600 mb-6" }, "Looking for a dedicated Salesforce DevOps Engineer?")
+                            ),
+                            
+                            React.createElement('a', {
+                                href: "https://calendly.com/julianjoseph/30min",
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                className: "inline-flex items-center gap-2 px-4 py-2 bg-gray-900 hover:bg-gray-800 hover:underline text-white rounded-lg font-medium text-sm transition-colors"
+                            },
+                                "Book a 30-min intro call",
+                                React.createElement(ChevronRight, { className: "w-4 h-4" })
+                            )
+                        )
+                    ),
+
+                    // Calculator
+                    React.createElement('div', { className: "bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border border-gray-200 mb-12" },
+                        calculateBaseTotal() > 0 && React.createElement('div', { className: "mb-6" },
+                            React.createElement('div', { className: "flex items-center gap-3 mb-4" },
+                                React.createElement('div', { className: "p-3 bg-blue-100 rounded-xl" },
+                                    React.createElement(Calculator, { className: "w-6 h-6 text-blue-600" })
+                                ),
+                                React.createElement('h2', { className: "text-2xl font-bold" }, "Your Estimate")
+                            ),
+                            
+                            React.createElement('div', { className: "p-6 bg-white rounded-xl border border-gray-200" },
+                                React.createElement('div', { className: "flex items-center justify-between mb-2" },
+                                    React.createElement('p', { className: "text-gray-600" }, "Selected Services:"),
+                                    React.createElement('p', { className: "text-3xl font-bold text-blue-600" }, `$${calculateBaseTotal().toLocaleString()}`)
+                                ),
+                                React.createElement('div', { className: "text-sm text-gray-500" },
+                                    serviceQuantities['linkedin-post'] > 0 && React.createElement('p', null, `• ${serviceQuantities['linkedin-post']} LinkedIn post${serviceQuantities['linkedin-post'] > 1 ? 's' : ''}`),
+                                    serviceQuantities['technical-article'] > 0 && React.createElement('p', null, `• ${serviceQuantities['technical-article']} technical article${serviceQuantities['technical-article'] > 1 ? 's' : ''}`),
+                                    serviceQuantities['content-pilot'] > 0 && React.createElement('p', null, `• ${serviceQuantities['content-pilot']} content pilot${serviceQuantities['content-pilot'] > 1 ? 's' : ''}`)
+                                )
+                            )
+                        ),
+                        
+                        React.createElement('div', { className: "text-center" },
+                            React.createElement('p', { className: "text-gray-600 mb-4" }, "If you're curious about my skillset specifically, feel free to interview me using my custom GPT"),
+                            React.createElement('a', {
+                                href: "https://chatgpt.com/g/g-685c90ace82481918804e759a1fc3b2d-interview-julian-joseph",
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                className: "inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 hover:underline font-medium transition-colors"
+                            },
+                                "Interview Julian Joseph's GPT",
+                                React.createElement(ExternalLink, { className: "w-4 h-4" })
+                            )
+                        )
+                    ),
+
+                    // Pricing Context
+                    React.createElement('div', { className: "bg-gray-50 rounded-xl p-6 border border-gray-200 mb-12" },
+                        React.createElement('h3', { className: "text-lg font-semibold mb-4 flex items-center gap-2" },
+                            React.createElement(TrendingUp, { className: "w-5 h-5 text-green-600" }),
+                            "Industry Pricing Context"
+                        ),
+                        React.createElement('div', { className: "space-y-3" },
+                            ...pricingSources.map((source, index) =>
+                                React.createElement('a', {
+                                    key: index,
+                                    href: source.url,
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    className: "flex items-start gap-2 text-sm group"
+                                },
+                                    React.createElement('span', { className: "text-gray-600" }, "•"),
+                                    React.createElement('span', { className: "text-blue-600 hover:text-blue-700 hover:underline transition-colors" }, source.text),
+                                    React.createElement(ExternalLink, { className: "w-3 h-3 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" })
+                                )
+                            ),
+                            React.createElement('p', { className: "text-sm text-gray-600 mt-3 pt-3 border-t border-gray-200" }, "• My rates reflect specialized Salesforce DevOps expertise & highly engaged, targeted audience")
+                        )
+                    ),
+
+                    // CTA
+                    React.createElement('div', { className: "text-center" },
+                        React.createElement('a', {
+                            href: "https://calendly.com/julianjoseph/30min",
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                            className: "inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                        },
+                            "Book a 30-min intro call",
+                            React.createElement(ChevronRight, { className: "w-5 h-5" })
+                        )
+                    )
+                )
+            );
+        }
+
+        ReactDOM.render(React.createElement(PricingPage), document.getElementById('root'));
+    </script>
+</body>
+</html>
